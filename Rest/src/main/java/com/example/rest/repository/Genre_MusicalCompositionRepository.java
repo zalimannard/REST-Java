@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public class Genre_MusicalCompositionRepositiory implements IRestRepository<Genre_MusicalComposition>
+public class Genre_MusicalCompositionRepository implements IRestRepository<Genre_MusicalComposition>
 {
     protected final JdbcOperations jdbcOperations;
 
@@ -43,7 +43,7 @@ public class Genre_MusicalCompositionRepositiory implements IRestRepository<Genr
             "WHERE \"id\" = ? " +
             "RETURNING \"id\", \"genre_id\", \"musicalCompositions_id\"";
 
-    public Genre_MusicalCompositionRepositiory(JdbcOperations JdbcOperations)
+    public Genre_MusicalCompositionRepository(JdbcOperations JdbcOperations)
     {
         this.jdbcOperations = JdbcOperations;
     }

@@ -16,15 +16,13 @@ public class MusicalCompositionResource extends BaseResource
     private Timestamp year;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private CountryResource[] countryItems;
+    private LanguageResource languageResource;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private CreatorResource[] creatorItems;
+    private CreatorResource composerResource;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private GenreResource[] genreResourcesItems;
+    private CreatorResource singerResource;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private Genre_MusicalCompositionResource[] genre_MusicalCompositionResourcesItems;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    private MusicalCompositionResource[] musicalCompositionItems;
+    private Genre_MusicalCompositionResource[] genre_MusicalCompositionResource;
 
     public MusicalCompositionResource()
     {
@@ -100,54 +98,44 @@ public class MusicalCompositionResource extends BaseResource
         this.year = year;
     }
 
-    public CountryResource[] getCountryItems()
+    public LanguageResource getLanguageResource()
     {
-        return countryItems;
+        return languageResource;
     }
 
-    public void setCountryItems(CountryResource[] countryItems)
+    public void setLanguageResource(LanguageResource languageResource)
     {
-        this.countryItems = countryItems;
+        this.languageResource = languageResource;
     }
 
-    public CreatorResource[] getCreatorItems()
+    public CreatorResource getComposerResource()
     {
-        return creatorItems;
+        return composerResource;
     }
 
-    public void setCreatorItems(CreatorResource[] creatorItems)
+    public void setComposerResource(CreatorResource composerResource)
     {
-        this.creatorItems = creatorItems;
+        this.composerResource = composerResource;
     }
 
-    public GenreResource[] getGenreResourcesItems()
+    public CreatorResource getSingerResource()
     {
-        return genreResourcesItems;
+        return singerResource;
     }
 
-    public void setGenreResourcesItems(GenreResource[] genreResourcesItems)
+    public void setSingerResource(CreatorResource singerResource)
     {
-        this.genreResourcesItems = genreResourcesItems;
+        this.singerResource = singerResource;
     }
 
-    public Genre_MusicalCompositionResource[] getGenre_MusicalCompositionResourcesItems()
+    public Genre_MusicalCompositionResource[] getGenre_MusicalCompositionResource()
     {
-        return genre_MusicalCompositionResourcesItems;
+        return genre_MusicalCompositionResource;
     }
 
-    public void setGenre_MusicalCompositionResourcesItems(Genre_MusicalCompositionResource[] genre_MusicalCompositionResourcesItems)
+    public void setGenre_MusicalCompositionResource(Genre_MusicalCompositionResource[] genre_MusicalCompositionResource)
     {
-        this.genre_MusicalCompositionResourcesItems = genre_MusicalCompositionResourcesItems;
-    }
-
-    public MusicalCompositionResource[] getMusicalCompositionItems()
-    {
-        return musicalCompositionItems;
-    }
-
-    public void setMusicalCompositionItems(MusicalCompositionResource[] musicalCompositionItems)
-    {
-        this.musicalCompositionItems = musicalCompositionItems;
+        this.genre_MusicalCompositionResource = genre_MusicalCompositionResource;
     }
 
     public MusicalComposition toEntity()

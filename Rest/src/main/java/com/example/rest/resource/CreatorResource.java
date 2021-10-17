@@ -12,13 +12,7 @@ public class CreatorResource extends BaseResource
     private String name;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private CountryResource[] countryItems;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    private GenreResource[] genreItems;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    private Genre_MusicalCompositionResource[] genre_MusicalCompositionResourcesItems;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    private LanguageResource[] languageItems;
+    private CountryResource countryResource;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private MusicalCompositionResource[] musicalCompositionItems;
 
@@ -63,44 +57,14 @@ public class CreatorResource extends BaseResource
         this.name = name;
     }
 
-    public CountryResource[] getCountryItems()
+    public CountryResource getCountryResource()
     {
-        return countryItems;
+        return countryResource;
     }
 
-    public void setCountryItems(CountryResource[] countryItems)
+    public void setCountryResource(CountryResource countryResource)
     {
-        this.countryItems = countryItems;
-    }
-
-    public GenreResource[] getGenreItems()
-    {
-        return genreItems;
-    }
-
-    public void setGenreItems(GenreResource[] genreItems)
-    {
-        this.genreItems = genreItems;
-    }
-
-    public Genre_MusicalCompositionResource[] getGenre_MusicalCompositionResourcesItems()
-    {
-        return genre_MusicalCompositionResourcesItems;
-    }
-
-    public void setGenre_MusicalCompositionResourcesItems(Genre_MusicalCompositionResource[] genre_MusicalCompositionResourcesItems)
-    {
-        this.genre_MusicalCompositionResourcesItems = genre_MusicalCompositionResourcesItems;
-    }
-
-    public LanguageResource[] getLanguageItems()
-    {
-        return languageItems;
-    }
-
-    public void setLanguageItems(LanguageResource[] languageItems)
-    {
-        this.languageItems = languageItems;
+        this.countryResource = countryResource;
     }
 
     public MusicalCompositionResource[] getMusicalCompositionItems()

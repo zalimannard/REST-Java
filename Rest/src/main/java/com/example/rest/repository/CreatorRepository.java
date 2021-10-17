@@ -99,8 +99,8 @@ public class CreatorRepository implements IRestRepository<Creator>
     @Override
     public Creator insert(Creator entity)
     {
-        Object[] params = new Object[] { entity.getName(), entity.getCountryId()};
-        int[] types = new int[] { Types.VARCHAR, Types.INTEGER};
+        Object[] params = new Object[] { entity.getCountryId(), entity.getName() };
+        int[] types = new int[] { Types.INTEGER, Types.VARCHAR };
         SqlRowSet rowSet = jdbcOperations.queryForRowSet(insertQuery, params, types);
         if (!rowSet.next())
         {
@@ -116,8 +116,8 @@ public class CreatorRepository implements IRestRepository<Creator>
     @Override
     public Creator update(Integer id, Creator entity)
     {
-        Object[] params = new Object[] { entity.getName(), entity.getCountryId(), id };
-        int[] types = new int[] { Types.VARCHAR, Types.INTEGER, Types.INTEGER };
+        Object[] params = new Object[] { entity.getCountryId(), entity.getName(), id };
+        int[] types = new int[] { Types.INTEGER, Types.VARCHAR, Types.INTEGER };
         SqlRowSet rowSet = jdbcOperations.queryForRowSet(updateQuery, params, types);
         if (!rowSet.next())
         {

@@ -12,15 +12,9 @@ public class Genre_MusicalCompositionResource extends BaseResource
     private Integer musicalCompositionId;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private CountryResource[] countryItems;
+    private GenreResource genreResources;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private CreatorResource[] creatorItems;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    private GenreResource[] genreResourcesItems;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    private LanguageResource[] languageItems;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    private MusicalCompositionResource[] musicalCompositionItems;
+    private MusicalCompositionResource musicalCompositionResource;
 
     public Genre_MusicalCompositionResource()
     {
@@ -63,54 +57,24 @@ public class Genre_MusicalCompositionResource extends BaseResource
         this.musicalCompositionId = musicalCompositionId;
     }
 
-    public CountryResource[] getCountryItems()
+    public GenreResource getGenreResources()
     {
-        return countryItems;
+        return genreResources;
     }
 
-    public void setCountryItems(CountryResource[] countryItems)
+    public void setGenreResources(GenreResource genreResources)
     {
-        this.countryItems = countryItems;
+        this.genreResources = genreResources;
     }
 
-    public CreatorResource[] getCreatorItems()
+    public MusicalCompositionResource getMusicalCompositionResource()
     {
-        return creatorItems;
+        return musicalCompositionResource;
     }
 
-    public void setCreatorItems(CreatorResource[] creatorItems)
+    public void setMusicalCompositionResource(MusicalCompositionResource musicalCompositionResource)
     {
-        this.creatorItems = creatorItems;
-    }
-
-    public GenreResource[] getGenreResourcesItems()
-    {
-        return genreResourcesItems;
-    }
-
-    public void setGenreResourcesItems(GenreResource[] genreResourcesItems)
-    {
-        this.genreResourcesItems = genreResourcesItems;
-    }
-
-    public LanguageResource[] getLanguageItems()
-    {
-        return languageItems;
-    }
-
-    public void setLanguageItems(LanguageResource[] languageItems)
-    {
-        this.languageItems = languageItems;
-    }
-
-    public MusicalCompositionResource[] getMusicalCompositionItems()
-    {
-        return musicalCompositionItems;
-    }
-
-    public void setMusicalCompositionItems(MusicalCompositionResource[] musicalCompositionItems)
-    {
-        this.musicalCompositionItems = musicalCompositionItems;
+        this.musicalCompositionResource = musicalCompositionResource;
     }
 
     public Genre_MusicalComposition toEntity()
